@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .dashboard {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .dashboard h1 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      color: #1e3c72;
+    }
+
+    .btn {
+      display: block;
+      background: #1e3c72;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      margin: 12px 0;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      font-weight: 500;
+      box-shadow: 0 8px 20px rgba(30, 60, 114, 0.2);
+    }
+
+    .btn:hover {
+      background: #2a5298;
+      transform: translateY(-2px);
+    }
+
+    .emoji {
+      margin-right: 8px;
+    }
+
+    @media (max-width: 480px) {
+      .dashboard {
+        padding: 30px 20px;
+      }
+
+      .dashboard h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dashboard">
+    <h1>🌤 My mini Dashboard</h1>
+    <a href="/calculator" class="btn"><span class="emoji">🧮</span>Calculator</a>
+    <a href="/converter" class="btn"><span class="emoji"></span>🌍💱 Currency Converter</a>
+    <a href="/rps" class="btn"><span class="emoji">✊✋✌</span>Rock Paper Scissors</a>
+    <a href="/guess" class="btn"><span class="emoji">🎯</span>Guess the Number</a>
+    <a href="/register" class="btn"><span class="emoji">📝</span>Register</a>
+    <a href="/weather" class="btn"><span class="emoji">☁</span>Weather</a>
+    <a href="/feedback"class="btn"><span class="emoli"></span>Feedback</a>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container">
+    <h1><span class="emoji">💱</span> Currency Converter</h1>
+    <form method="POST">
+      <input type="number" name="amount" placeholder="Enter Amount" step="any" required>
+      
+      <div class="dropdowns">
+        <select name="from_currency" required>
+          <option value="">From</option>
+          <option value="INR">INR</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <!-- Add more options -->
+        </select>
+
+        <select name="to_currency" required>
+          <option value="">To</option>
+          <option value="USD">USD</option>
+          <option value="INR">INR</option>
+          <option value="EUR">EUR</option>
+        </select>
+      </div>
+
+      <input type="number" name="rate" placeholder="Enter Conversion Rate" step="any" required>
+      
+      <button type="submit">Convert</button>
+    </form>
+
+    {% if converted is not none %}
+    <p class="result">Converted amount: <strong>{{ converted }}</strong></p>
+    {% endif %}
+
+    <a class="back-link" href="/"><img src="https://img.icons8.com/emoji/24/back-arrow-emoji.png"/> Back to Dashboard</a>
+  </div>
+</body>
+</html>

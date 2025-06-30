@@ -1,0 +1,108 @@
+<!-- templates/feedback.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom right, #65bade, #43b3d8, #0e739f);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: lightblue;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px blue;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+            color: blue;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        input:focus, textarea:focus {
+            outline: 2px solid lightblue;
+        }
+
+        .btn {
+            background-color: blue;
+            border: none;
+            padding: 12px;
+            color: lightblue;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #00e6e6;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            padding: 10px;
+            background: cyan;
+            color: lightblue;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #00e6e6;
+        }
+
+        .toggle {
+            background: #00ffff;
+            color: blue;
+            padding: 8px 16px;
+            margin-bottom: 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 0 10px cyan;
+        }
+
+    </style>
+</head>
+<body>
+    <button class="toggle">🌗 Toggle Mode</button>
+
+    <div class="container">
+        <h2>🔔 Share Your Feedback</h2>
+        <form method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <textarea name="comments" placeholder="Your Feedback" rows="5" required></textarea>
+            <button type="submit" class="btn">Submit Feedback</button>
+        </form>
+        <a href="{{ url_for('dashboard') }}" class="back-btn">⬅ Back to Dashboard</a>
+    </div>
+</body>
+</html>
